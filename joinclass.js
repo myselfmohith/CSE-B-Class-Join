@@ -81,7 +81,7 @@ function changeClass() {
         if (xyz>=tstart[i] && xyz<tend[i]) {
             cclass = timetable[xyz.getDay()][i+1]; 
             clink = timetable["links"][cclass];
-            forhtml = "<a href='" + clink + "'>" + cclass + "</a";
+            forhtml = "<a target='_blank' href='" + clink + "'>" + cclass + "</a";
             span.innerHTML = forhtml;
             return;
         }
