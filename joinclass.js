@@ -86,7 +86,7 @@ function changeClass() {
             return;
         }
     }
-    forhtml = "No Class Now";
+    forhtml = "NONE";
     span.innerHTML = forhtml;
 }
 
