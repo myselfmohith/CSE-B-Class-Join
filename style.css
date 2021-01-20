@@ -71,12 +71,24 @@ table {
   border-spacing: 0;
   width: 100%;
   height: 50vh;
-  overflow: hidden;
 }
+
 
 td,
 th {
   padding: 15px 5px;
+}
+
+.weekFixed{
+  position: sticky;
+  left: 0;
+}
+
+
+@media (max-width: 1208px){
+  .weekFixed{
+    border-right: solid 0.5px #52bfff;
+  }
 }
 
 th {
