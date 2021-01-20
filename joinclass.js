@@ -68,18 +68,15 @@ const info = `{
   }
   `;
 
-// -------- Notification Sending Part  -----------------
-if (Notification.permission === "default") {
-  setTimeout(() => {
-    Notification.requestPermission();
-  }, 4000);
-}
-
 function notifyStudent(cclass) {
-  const noti = new Notification("CSE-B KLU CLASS ALERT", {
+  Push.create("CSE-B KLU CLASS ALERT", {
     body: "You have " + cclass + " class in Few Minutes",
     icon:
       "https://upload.wikimedia.org/wikipedia/en/5/53/Kalasalingam_Academy_of_Research_and_Education_logo.png",
+    onClick: function () {
+      window.focus();
+      this.close();
+    },
   });
 }
 // ---------------------------------------------------
