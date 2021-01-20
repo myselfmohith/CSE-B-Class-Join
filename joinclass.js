@@ -71,8 +71,8 @@ function parseTime(text) {
 }
 
 const timetable = JSON.parse(info);
-tstart = [parseTime("9:0"),parseTime("10:0"),parseTime("11:0"),parseTime("12:0"),parseTime("14:0"),parseTime("14:50"),parseTime("15:40")]
-tend = [parseTime("9:50"),parseTime("10:50"),parseTime("11:50"),parseTime("12:50"),parseTime("14:50"),parseTime("15:40"),parseTime("16:30")]
+tstart = [parseTime("8:57"),parseTime("9:57"),parseTime("10:57"),parseTime("11:57"),parseTime("13:57"),parseTime("14:48"),parseTime("15:38")]
+tend = [parseTime("9:50"),parseTime("10:50"),parseTime("11:50"),parseTime("12:50"),parseTime("14:48"),parseTime("15:38"),parseTime("16:30")]
 var cclass , clink ,forhtml;
 
 function changeClass() {
@@ -81,14 +81,14 @@ function changeClass() {
         if (xyz>=tstart[i] && xyz<tend[i]) {
             cclass = timetable[xyz.getDay()][i+1]; 
             clink = timetable["links"][cclass];
-            forhtml = "<a target='_blank' href='" + clink + "'>" + cclass + "</a";
+            forhtml = "<a target='_blank' onClick='javascript:setTimeout(window.close, 1);' href='" + clink + "'>" + cclass + "</a";
             span.innerHTML = forhtml;
             return;
-        }
+      }
     }
     forhtml = "NONE";
     span.innerHTML = forhtml;
 }
 
 setTimeout(changeClass, 0);
-setInterval(changeClass, 20000);
+setInterval(changeClass, 30000);

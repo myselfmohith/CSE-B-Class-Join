@@ -27,7 +27,7 @@ body {
 }
 
 .pname:hover{
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .pname a{
@@ -87,13 +87,18 @@ th {
 tr:nth-child(odd) {
   background-color: #52bfff;
 }
+
+tr:hover{
+  background-color:rgb(82,191,242,0.5) ;
+}
+
 td,
 tr,
 th {
-  border: solid 0.5px #2a2a72 0.5;
+  border: solid 0.5px #52bfff 0.5;
   transition: 0.5s;
 }
 
 td:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
