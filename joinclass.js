@@ -7,7 +7,7 @@ const info = `{
       "CSE18R273": "https://meet.google.com/wqr-ecgm-awx",
       "CSE18R260": "https://meet.google.com/pyf-ftxx-cdc",
       "MAT18R207": "https://meet.google.com/pbo-ubqb-zjm",
-      "BIT18R101": "https://meet.google.com/ygc-vvgz-xmh"
+      "BIT18R101": "https://meet.google.com/nuq-jzvn-efk"
     },
     "1": {
       "Day": "Monday",
