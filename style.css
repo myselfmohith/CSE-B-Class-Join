@@ -84,6 +84,9 @@ th {
   left: 0;
 }
 
+.weekFixed:hover{
+  transform: scale(1);
+}
 
 @media (max-width: 1208px){
   .weekFixed{
