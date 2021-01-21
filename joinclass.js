@@ -121,7 +121,7 @@ function changeClass() {
       cclass = timetable[xyz.getDay()][i + 1];
       if (cclass === "NONE") break;
       clink = timetable["links"][cclass];
-      forhtml ="<a target='_blank' onClick='javascript:setTimeout(window.close, 1);' href='" +clink +"'>" +cclass +"</a";
+      forhtml ="<a target='_blank' href='" +clink +"'>" +cclass +"</a";
       span.innerHTML = forhtml;
 
       // For Notification -----------
