@@ -78,7 +78,6 @@ function notifyStudent(cclass) {
       this.close();
     },
   });
-  alert("You have " + cclass + " class in Few Minutes");
 }
 // ---------------------------------------------------
 
