@@ -3,12 +3,12 @@ const span = document.querySelector(".pname");
 // Jason File here >>>>>
 const info = `{
     "links": {
-      "INT18R371": "https://meet.google.com/obf-rgqt-tpt",
-      "CSE18R173": "https://meet.google.com/dev-tgvn-hov",
-      "CSE18R273": "https://meet.google.com/wqr-ecgm-awx",
-      "CSE18R260": "https://meet.google.com/pyf-ftxx-cdc",
-      "MAT18R207": "https://meet.google.com/pbo-ubqb-zjm",
-      "BIT18R101": "https://meet.google.com/woa-pzxk-mwz",
+      "INT18R371": "//meet.google.com/obf-rgqt-tpt",
+      "CSE18R173": "//meet.google.com/dev-tgvn-hov",
+      "CSE18R273": "//meet.google.com/wqr-ecgm-awx",
+      "CSE18R260": "//meet.google.com/pyf-ftxx-cdc",
+      "MAT18R207": "//meet.google.com/pbo-ubqb-zjm",
+      "BIT18R101": "//meet.google.com/woa-pzxk-mwz",
       "NONE": "index.html"
     },
     "1": {
@@ -63,7 +63,7 @@ const info = `{
     },
 
     "5": {
-        "Day": "Friday"
+        "Day": "Saturday"
     }
   }
   `;
