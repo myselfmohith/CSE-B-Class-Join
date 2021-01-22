@@ -62,7 +62,7 @@ const info = `{
       "7": "MAT18R207"
     },
 
-    "5": {
+    "6": {
         "Day": "Saturday"
     }
   }
