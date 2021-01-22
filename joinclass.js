@@ -58,33 +58,29 @@ const info = `{
       "3": "CSE18R260",
       "4": "CSE18R260",
       "5": "CSE18R173",
-      "6": "CSE18R173",
-      "7": "MAT18R207"
+      "6": "MAT18R207",
+      "7": "INT18R371"
     },
 
-    "5": {
-        "Day": "Saturday"
+    "6": {
+        "Day": "Saturday",
+        "1": "NONE",
+        "2": "NONE",
+        "3": "NONE",
+        "4": "NONE",
+        "5": "NONE",
+        "6": "NONE",
+        "7": "NONE"
     }
   }
   `;
 
-function notifyStudent(cclass) {
-  Push.create("CSE-B KLU CLASS ALERT", {
-    body: "You have " + cclass + " class in Few Minutes",
-    icon:
-      "https://upload.wikimedia.org/wikipedia/en/5/53/Kalasalingam_Academy_of_Research_and_Education_logo.png",
-    onClick: function () {
-      window.focus();
-      this.close();
-    },
-  });
-}
-// ---------------------------------------------------
+
 
 function parseTime(text) {
   var mxm = new Date();
   var c = text.split(":");
-  mxm.setHours(Number(c[0]), Number(c[1]), 0,0);
+  mxm.setHours(Number(c[0]), Number(c[1]), 0, 0);
   return mxm;
 }
 
@@ -121,13 +117,13 @@ function changeClass() {
       cclass = timetable[xyz.getDay()][i + 1];
       if (cclass === "NONE") break;
       clink = timetable["links"][cclass];
-      forhtml ="<a target='_blank' onClick='javascript:setTimeout(window.close, 1);' href='" +clink +"'>" +cclass +"</a";
+      forhtml =
+        "<a target='_blank' onClick='javascript:setTimeout(window.close, 1);' href='" +
+        clink +
+        "'>" +
+        cclass +
+        "</a";
       span.innerHTML = forhtml;
-
-      // For Notification -----------
-      var l1 = parseText(xyz)
-      var l2 = parseText(tstart[i])
-      if (l1 === l2) notifyStudent(cclass);
       return;
     }
   }
@@ -135,5 +131,25 @@ function changeClass() {
   span.innerHTML = forhtml;
 }
 
-setTimeout(changeClass, 0);
-setInterval(changeClass, 40000);
+// Alert to Join
+var timenow = new Date();
+function alertUser() {
+  for (var i = 0; i < 7; i++) {
+    if (timenow >= tstart[i] && timenow < tend[i]) {
+      cclass = timetable[timenow.getDay()][i + 1];
+      if (cclass === "NONE") break;
+      clink = timetable["links"][cclass];
+      var alertmessage = "Would you like to be Redirected 🚗 to " + cclass + " class";
+      if (confirm(alertmessage)) {
+        setTimeout(window.close, 1000);
+        window.open(clink, '_blank');
+      }
+    }
+  }
+}
+
+if (timenow.getDay() != 7) {
+  changeClass();
+  setTimeout(alertUser, 100);
+  setInterval(changeClass, 40000);
+}
