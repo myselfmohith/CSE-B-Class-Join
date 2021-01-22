@@ -63,6 +63,7 @@ const info = `{
     },
 
     "6": {
+<<<<<<< HEAD
         "Day": "Saturday",
         "1": "NONE",
         "2": "NONE",
@@ -71,6 +72,9 @@ const info = `{
         "5": "NONE",
         "6": "NONE",
         "7": "NONE"
+=======
+        "Day": "Saturday"
+>>>>>>> 4b363409da9a0d7f78ab1dbe742aa4892ce19d36
     }
   }
   `;
@@ -136,13 +140,13 @@ var timenow = new Date();
 function alertUser() {
   for (var i = 0; i < 7; i++) {
     if (timenow >= tstart[i] && timenow < tend[i]) {
-      cclass = timetable[timenow.getDay()][i + 1];
-      if (cclass === "NONE") break;
-      clink = timetable["links"][cclass];
-      var alertmessage = "Would you like to be Redirected 🚗 to " + cclass + " class";
+      var ccclass = timetable[timenow.getDay()][i + 1];
+      if (ccclass === "NONE") break;
+      cclink = timetable["links"][ccclass];
+      var alertmessage = "Would you like to be Redirected 🚗 to " + ccclass + " class";
       if (confirm(alertmessage)) {
         setTimeout(window.close, 1000);
-        window.open(clink, '_blank');
+        window.open(cclink, '_blank');
       }
     }
   }
