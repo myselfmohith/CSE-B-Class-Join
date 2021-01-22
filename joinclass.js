@@ -61,9 +61,7 @@ const info = `{
       "6": "MAT18R207",
       "7": "INT18R371"
     },
-
     "6": {
-<<<<<<< HEAD
         "Day": "Saturday",
         "1": "NONE",
         "2": "NONE",
@@ -72,9 +70,6 @@ const info = `{
         "5": "NONE",
         "6": "NONE",
         "7": "NONE"
-=======
-        "Day": "Saturday"
->>>>>>> 4b363409da9a0d7f78ab1dbe742aa4892ce19d36
     }
   }
   `;
