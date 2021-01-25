@@ -132,7 +132,7 @@ function changeClass() {
 
 // Alert to Join
 var timenow = new Date();
-function alertUser() {
+async function alertUser() {
   for (var i = 0; i < 7; i++) {
     if (timenow >= tstart[i] && timenow < tend[i]) {
       var ccclass = timetable[timenow.getDay()][i + 1];
@@ -141,7 +141,6 @@ function alertUser() {
       var alertmessage = "Would you like to be Redirected 🚗 to " + ccclass + " class";
       if (confirm(alertmessage)) {
         document.querySelector(".pname a").click();
-        setTimeout(window.close, 1000);
       }
     }
   }
