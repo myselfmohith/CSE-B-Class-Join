@@ -140,8 +140,8 @@ function alertUser() {
       cclink = timetable["links"][ccclass];
       var alertmessage = "Would you like to be Redirected 🚗 to " + ccclass + " class";
       if (confirm(alertmessage)) {
+        document.querySelector(".pname a").click();
         setTimeout(window.close, 1000);
-        window.open(cclink, '_blank');
       }
     }
   }
