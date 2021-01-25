@@ -108,7 +108,6 @@ const tend = [
   parseTime("16:30"),
 ];
 var cclass, clink, forhtml;
-
 function changeClass() {
   var xyz = new Date();
   for (var i = 0; i < 7; i++) {
@@ -130,24 +129,9 @@ function changeClass() {
   span.innerHTML = forhtml;
 }
 
-// Alert to Join
-var timenow = new Date();
-async function alertUser() {
-  for (var i = 0; i < 7; i++) {
-    if (timenow >= tstart[i] && timenow < tend[i]) {
-      var ccclass = timetable[timenow.getDay()][i + 1];
-      if (ccclass === "NONE") break;
-      cclink = timetable["links"][ccclass];
-      var alertmessage = "Would you like to be Redirected 🚗 to " + ccclass + " class";
-      if (confirm(alertmessage)) {
-        document.querySelector(".pname a").click();
-      }
-    }
-  }
-}
 
+let timenow = new Date();
 if (timenow.getDay() != 7) {
   changeClass();
-  setTimeout(alertUser, 100);
   setInterval(changeClass, 40000);
 }

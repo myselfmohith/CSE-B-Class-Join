@@ -32,6 +32,7 @@ body {
 
 .pname a{
   color: #009ffd;
+  cursor: pointer;
 }
 
 .table-responsive a {
@@ -88,6 +89,7 @@ th {
 }
 
 .weekFixed{
+  text-align: center;
   position: sticky;
   left: 0;
 }
@@ -125,3 +127,16 @@ th {
 td:hover {
   transform: scale(1.2);
 }
+
+.nohoveraction td:hover{
+  transform: none;
+}
+
+.nohoveraction tr:hover{
+  background-color: none;
+}
+
+.nohoveraction{
+  text-align: left;
+}
+
