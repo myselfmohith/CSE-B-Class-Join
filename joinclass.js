@@ -8,7 +8,7 @@ const info = `{
       "CSE18R273": "//meet.google.com/wqr-ecgm-awx",
       "CSE18R260": "//meet.google.com/pyf-ftxx-cdc",
       "MAT18R207": "//meet.google.com/pbo-ubqb-zjm",
-      "BIT18R101": "//meet.google.com/woa-pzxk-mwz",
+      "BIT18R101": "//meet.google.com/bie-hjmc-xah",
       "NONE": "index.html"
     },
     "1": {
