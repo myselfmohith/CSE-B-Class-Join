@@ -63,25 +63,19 @@ const info = `{
     },
     "6": {
         "Day": "Saturday",
-        "1": "INT18R371",
-        "2": "INT18R371",
-        "3": "CSE18R173",
-        "4": "CSE18R173",
-        "5": "CSE18R273",
-        "6": "CSE18R173",
-        "7": "MAT18R207"
+        "1": "NONE",
+        "2": "NONE",
+        "3": "NONE",
+        "4": "NONE",
+        "5": "NONE",
+        "6": "NONE",
+        "7": "NONE"
     }
   }
   `;
 
   // Layout
-  // "1": "NONE",
-  //       "2": "NONE",
-  //       "3": "NONE",
-  //       "4": "NONE",
-  //       "5": "NONE",
-  //       "6": "NONE",
-  //       "7": "NONE"
+
 
 function parseTime(text) {
   var mxm = new Date();
