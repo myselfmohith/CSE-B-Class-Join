@@ -98,21 +98,21 @@ function parseText(date) {
 const timetable = JSON.parse(info);
 const tstart = [
   parseTime("8:57"),
-  parseTime("9:57"),
-  parseTime("10:57"),
-  parseTime("11:57"),
-  parseTime("13:57"),
-  parseTime("14:48"),
-  parseTime("15:38"),
+  parseTime("9:53"),
+  parseTime("10:53"),
+  parseTime("11:48"),
+  parseTime("13:28"),
+  parseTime("14:18"),
+  parseTime("15:18"),
 ];
 const tend = [
   parseTime("9:50"),
-  parseTime("10:50"),
-  parseTime("11:50"),
-  parseTime("12:50"),
-  parseTime("14:48"),
-  parseTime("15:38"),
-  parseTime("16:30"),
+  parseTime("10:43"),
+  parseTime("11:43"),
+  parseTime("12:38"),
+  parseTime("14:17"),
+  parseTime("15:10"),
+  parseTime("16:10"),
 ];
 var cclass, clink, forhtml;
 function changeClass() {
