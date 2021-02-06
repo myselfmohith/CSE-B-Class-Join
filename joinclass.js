@@ -63,18 +63,25 @@ const info = `{
     },
     "6": {
         "Day": "Saturday",
-        "1": "NONE",
-        "2": "NONE",
-        "3": "NONE",
-        "4": "NONE",
-        "5": "NONE",
-        "6": "NONE",
-        "7": "NONE"
+        "1": "BIT18R101",
+      "2": "NONE",
+      "3": "CSE18R273",
+      "4": "CSE18R273",
+      "5": "CSE18R173",
+      "6": "MAT18R207",
+      "7": "INT18R371"
     }
   }
   `;
 
   // Layout
+//"1": "NONE",
+        //"2": "NONE",
+        //"3": "NONE",
+        //"4": "NONE",
+        //"5": "NONE",
+        //"6": "NONE",
+       // "7": "NONE"
 
 
 function parseTime(text) {
