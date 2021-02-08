@@ -1,4 +1,52 @@
-const span=document.querySelector(".pname"),info='{\n    "links": {\n      "INT18R371": "//meet.google.com/obf-rgqt-tpt",\n      "CSE18R173": "//meet.google.com/dev-tgvn-hov",\n      "CSE18R273": "//meet.google.com/wqr-ecgm-awx",\n      "CSE18R260": "//meet.google.com/pyf-ftxx-cdc",\n      "MAT18R207": "//meet.google.com/pbo-ubqb-zjm",\n      "BIT18R101": "//meet.google.com/bie-hjmc-xah",\n      "NONE": "index.html"\n    },\n    "1": {\n      "Day": "Monday",\n      "1": "BIT18R101",\n      "2": "CSE18R273",\n      "3": "CSE18R173",\n      "4": "CSE18R260",\n      "5": "MAT18R207",\n      "6": "CSE18R273",\n      "7": "INT18R371"\n    },\n    "2": {\n      "Day": "Tuesday",\n      "1": "INT18R371",\n      "2": "INT18R371",\n      "3": "CSE18R173",\n      "4": "CSE18R173",\n      "5": "CSE18R273",\n      "6": "CSE18R173",\n      "7": "MAT18R207"\n    },\n    "3": {\n      "Day": "Wednesday",\n      "1": "CSE18R273",\n      "2": "BIT18R101",\n      "3": "CSE18R173",\n      "4": "CSE18R260",\n      "5": "NONE",\n      "6": "MAT18R207",\n      "7": "NONE"\n    },\n    "4": {\n      "Day": "Thrusday",\n      "1": "BIT18R101",\n      "2": "NONE",\n      "3": "CSE18R273",\n      "4": "CSE18R273",\n      "5": "CSE18R173",\n      "6": "MAT18R207",\n      "7": "INT18R371"\n    },\n    "5": {\n      "Day": "Friday",\n      "1": "CSE18R273",\n      "2": "CSE18R260",\n      "3": "CSE18R260",\n      "4": "CSE18R260",\n      "5": "CSE18R173",\n      "6": "MAT18R207",\n      "7": "INT18R371"\n    },\n    "6": {\n        "Day": "Saturday",\n        "1": "NONE",\n        "2": "NONE",\n        "3": "NONE",\n        "4": "NONE",\n        "5": "NONE",\n        "6": "NONE",\n        "7": "NONE"\n    }\n  }\n  ';function parseTime(n){var e=new Date,R=n.split(":");return e.setHours(Number(R[0]),Number(R[1]),0,0),e}function parseText(n){return n.getHours()+":"+n.getMinutes()}const timetable=JSON.parse(info);
+const span = document.querySelector(".pname"),
+  info =
+    '{\n    "links": {\n      "INT18R371": "//meet.google.com/obf-rgqt-tpt?pli=1&authuser=1",\n      "CSE18R173": "//meet.google.com/dev-tgvn-hov?pli=1&authuser=1",\n      "CSE18R273": "//meet.google.com/wqr-ecgm-awx?pli=1&authuser=1",\n      "CSE18R260": "//meet.google.com/pyf-ftxx-cdc?pli=1&authuser=1",\n      "MAT18R207": "//meet.google.com/pbo-ubqb-zjm?pli=1&authuser=1",\n      "BIT18R101": "//meet.google.com/bie-hjmc-xah?pli=1&authuser=1",\n      "NONE": "index.html"\n    },\n    "1": {\n      "Day": "Monday",\n      "1": "BIT18R101",\n      "2": "CSE18R273",\n      "3": "CSE18R173",\n      "4": "CSE18R260",\n      "5": "MAT18R207",\n      "6": "CSE18R273",\n      "7": "INT18R371"\n    },\n    "2": {\n      "Day": "Tuesday",\n      "1": "INT18R371",\n      "2": "INT18R371",\n      "3": "CSE18R173",\n      "4": "CSE18R173",\n      "5": "CSE18R273",\n      "6": "CSE18R173",\n      "7": "MAT18R207"\n    },\n    "3": {\n      "Day": "Wednesday",\n      "1": "CSE18R273",\n      "2": "BIT18R101",\n      "3": "CSE18R173",\n      "4": "CSE18R260",\n      "5": "NONE",\n      "6": "MAT18R207",\n      "7": "NONE"\n    },\n    "4": {\n      "Day": "Thrusday",\n      "1": "BIT18R101",\n      "2": "NONE",\n      "3": "CSE18R273",\n      "4": "CSE18R273",\n      "5": "CSE18R173",\n      "6": "MAT18R207",\n      "7": "INT18R371"\n    },\n    "5": {\n      "Day": "Friday",\n      "1": "CSE18R273",\n      "2": "CSE18R260",\n      "3": "CSE18R260",\n      "4": "CSE18R260",\n      "5": "CSE18R173",\n      "6": "MAT18R207",\n      "7": "INT18R371"\n    },\n    "6": {\n        "Day": "Saturday",\n        "1": "NONE",\n        "2": "NONE",\n        "3": "NONE",\n        "4": "NONE",\n        "5": "NONE",\n        "6": "NONE",\n        "7": "NONE"\n    }\n  }\n  ';
+function parseTime(n) {
+  var e = new Date(),
+    R = n.split(":");
+  return e.setHours(Number(R[0]), Number(R[1]), 0, 0), e;
+}
+function parseText(n) {
+  return n.getHours() + ":" + n.getMinutes();
+}
+const timetable = JSON.parse(info);
 // Saturday Tiemtable Set here
 // timetable["6"] = timetable[""];
-const tstart=[parseTime("8:57"),parseTime("9:53"),parseTime("10:53"),parseTime("11:48"),parseTime("13:28"),parseTime("14:18"),parseTime("15:18")],tend=[parseTime("9:50"),parseTime("10:43"),parseTime("11:43"),parseTime("12:38"),parseTime("14:17"),parseTime("15:10"),parseTime("16:10")];var cclass,clink,forhtml;function changeClass(){for(var e=new Date,a=0;a<7;a++)if(e>=tstart[a]&&e<tend[a]){if("NONE"===(cclass=timetable[e.getDay()][a+1]))break;return clink=timetable.links[cclass],forhtml="<a target='_blank' onClick='javascript:setTimeout(window.close, 1);' href='"+clink+"'>"+cclass+"</a",void(span.innerHTML=forhtml)}forhtml="NONE",span.innerHTML=forhtml}let timenow=new Date;7!=timenow.getDay()&&(changeClass(),setInterval(changeClass,4e4));
+const tstart = [
+    parseTime("8:57"),
+    parseTime("9:53"),
+    parseTime("10:53"),
+    parseTime("11:48"),
+    parseTime("13:28"),
+    parseTime("14:18"),
+    parseTime("15:18"),
+  ],
+  tend = [
+    parseTime("9:50"),
+    parseTime("10:43"),
+    parseTime("11:43"),
+    parseTime("12:38"),
+    parseTime("14:17"),
+    parseTime("15:10"),
+    parseTime("16:10"),
+  ];
+var cclass, clink, forhtml;
+function changeClass() {
+  for (var e = new Date(), a = 0; a < 7; a++)
+    if (e >= tstart[a] && e < tend[a]) {
+      if ("NONE" === (cclass = timetable[e.getDay()][a + 1])) break;
+      return (
+        (clink = timetable.links[cclass]),
+        (forhtml =
+          "<a target='_blank' onClick='javascript:setTimeout(window.close, 1);' href='" +
+          clink +
+          "'>" +
+          cclass +
+          "</a"),
+        void (span.innerHTML = forhtml)
+      );
+    }
+  (forhtml = "NONE"), (span.innerHTML = forhtml);
+}
+let timenow = new Date();
+7 != timenow.getDay() && (changeClass(), setInterval(changeClass, 4e4));
