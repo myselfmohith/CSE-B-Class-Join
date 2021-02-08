@@ -1,3 +1,10 @@
+* {
+  text-decoration: none;
+  --primary-color: #222;
+  --secondary-color: #333;
+  background-color: var(--primary-color);
+}
+
 body {
   margin: 0;
   padding: 0;
