@@ -63,25 +63,16 @@ const info = `{
     },
     "6": {
         "Day": "Saturday",
-        "1": "BIT18R101",
-      "2": "NONE",
-      "3": "CSE18R273",
-      "4": "CSE18R273",
-      "5": "CSE18R173",
-      "6": "MAT18R207",
-      "7": "INT18R371"
+        "1": "NONE",
+        "2": "NONE",
+        "3": "NONE",
+        "4": "NONE",
+        "5": "NONE",
+        "6": "NONE",
+        "7": "NONE"
     }
   }
   `;
-
-  // Layout
-//"1": "NONE",
-        //"2": "NONE",
-        //"3": "NONE",
-        //"4": "NONE",
-        //"5": "NONE",
-        //"6": "NONE",
-       // "7": "NONE"
 
 
 function parseTime(text) {
@@ -97,6 +88,8 @@ function parseText(date) {
 }
 
 const timetable = JSON.parse(info);
+// Saturday Tiemtable Set here
+// timetable["6"] = timetable[""];
 const tstart = [
   parseTime("8:57"),
   parseTime("9:53"),
