@@ -130,15 +130,21 @@ td:hover {
   transition: 1s;
 }
 
+@keyframes picmoving{
+  0%{background-position: 0;}
+  100%{background-position: 0 720px;}
+}
+
 .ads-google {
   min-width: 70vw;
   min-height: 200px;
-  background-color: #fff;
+  background-color: var(--secondary-color);
   margin: 10px auto 25px;
-  background-image: url("https://i1.wp.com/www.socialnews.xyz/wp-content/uploads/2020/06/09/Nandamuri-Balakrishna-Massy-HD-Stills-From-Balayya-Boyapati-3-Movie-1-scaled.jpg?quality=80&zoom=1&ssl=1");
+  background-image: url("https://picsum.photos/720");
   background-size: cover;
-  background-position: center;
+  background-position: 0;
   border-radius: 10px;
+  animation: picmoving 20s infinite linear;
 }
 
 .showad{
