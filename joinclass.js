@@ -38,7 +38,7 @@ function changeClass() {
       return (
         (clink = timetable.links[cclass]),
         (forhtml =
-          "<a target='_blank' onClick='javascript:setTimeout(window.close, 1);' href='" +
+          "<a target='_blank' href='" +
           clink +
           "'>" +
           cclass +
