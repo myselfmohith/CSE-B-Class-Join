@@ -11,7 +11,7 @@ function parseText(n) {
 }
 const timetable = JSON.parse(info);
 // Saturday Tiemtable Set here
-// timetable["6"] = timetable[""];
+timetable["6"] = timetable["5"];
 const tstart = [
     parseTime("8:57"),
     parseTime("9:53"),
