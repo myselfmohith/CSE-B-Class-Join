@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 * {
   text-decoration: none;
-  --primary-color: #222222;
-  --secondary-color: #333333;
+  --primary-color: #12142e; 
+  --secondary-color: #13092075;
   background-color: var(--primary-color);
 }
 
@@ -16,6 +18,7 @@ body {
   text-align: center;
   background-color: var(--primary-color);
   color: #fff;
+  font-family: 'Poppins', sans-serif;
 }
 
 
@@ -64,8 +67,18 @@ h1 {
   font-size: 2rem;
 }
 .current-container h1 {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
+.current-container h3{
+  margin: 5px;
+  font-weight: 300;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff75;
+}
+
 .table-responsive {
   width: 90vw;
   overflow: auto;
@@ -124,31 +137,4 @@ td:hover {
 }
 .nohoveraction {
   text-align: left;
-}
-
-#gadd{
-  transition: 1s;
-}
-
-@keyframes picmoving{
-  0%{background-position: 0;}
-  100%{background-position: 0 720px;}
-}
-
-.ads-google {
-  min-width: 70vw;
-  min-height: 200px;
-  background-color: var(--secondary-color);
-  margin: 10px auto 25px;
-  background-image: url("https://picsum.photos/720");
-  background-size: cover;
-  background-position: 0;
-  border-radius: 10px;
-  animation: picmoving 20s infinite linear;
-}
-
-.showad{
-  margin: 20px;
-  cursor: pointer;
-  color: blueviolet;
 }

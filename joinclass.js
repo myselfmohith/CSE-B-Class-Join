@@ -13,14 +13,14 @@ const timetable = JSON.parse(info);
 // Saturday Tiemtable Set here
 timetable["6"] = timetable["5"];
 const tstart = [
-    parseTime("8:57"),
-    parseTime("9:53"),
-    parseTime("10:53"),
-    parseTime("11:48"),
-    parseTime("13:28"),
-    parseTime("14:18"),
-    parseTime("15:18"),
-  ],
+  parseTime("8:57"),
+  parseTime("9:53"),
+  parseTime("10:53"),
+  parseTime("11:48"),
+  parseTime("13:28"),
+  parseTime("14:18"),
+  parseTime("15:18"),
+],
   tend = [
     parseTime("9:50"),
     parseTime("10:43"),
@@ -50,3 +50,13 @@ function changeClass() {
 }
 let timenow = new Date();
 7 != timenow.getDay() && (changeClass(), setInterval(changeClass, 4e4));
+
+
+
+function showDateTime() {
+  const uuuu = new Date();
+  document.querySelector(".current-container h3").innerHTML = (uuuu.toDateString() + " &nbsp; " + uuuu.toLocaleTimeString());
+}
+
+showDateTime();
+setInterval(showDateTime, 1000);
