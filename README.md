@@ -1,3 +1,4 @@
 # CSE-B-Class-Join
 
-link to page - https://affectionate-mahavira-590bdd.netlify.app/
+Redirect link to page - https://affectionate-mahavira-590bdd.netlify.app/
+Main Page Link - https://myselfmohith.github.io/CSE-B-Class-Join/
