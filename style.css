@@ -3,7 +3,7 @@
 * {
   text-decoration: none;
   --primary-color: #12142e; 
-  --secondary-color: #13092075;
+  --secondary-color: #191736;
   background-color: var(--primary-color);
 }
 
@@ -85,7 +85,7 @@ h1 {
   margin-top: 20px;
   border: var(--secondary-color) solid;
   transition: 0.5s;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   border-radius: 25px;
   box-shadow: 0 0 10px -1px rgba(255, 255, 255, 0.5);
 }
