@@ -89,6 +89,7 @@ h1 {
   border-radius: 25px;
   box-shadow: 0 0 10px -1px rgba(255, 255, 255, 0.5);
 }
+
 table {
   border-spacing: 0;
   width: 100%;
@@ -137,4 +138,13 @@ td:hover {
 }
 .nohoveraction {
   text-align: left;
+}
+
+.examtimetable{
+  min-width: fit-content;
+  max-width: 40vw;
+}
+
+.examtimetable *:hover{
+  transform: unset;
 }
