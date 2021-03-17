@@ -140,11 +140,8 @@ td:hover {
   text-align: left;
 }
 
-.examtimetable{
-  min-width: fit-content;
-  max-width: 40vw;
-}
-
-.examtimetable *:hover{
-  transform: unset;
+.UpadateUsers{
+  margin: 10px auto 20px;
+  opacity: .5;
+  color: #ff0000;
 }

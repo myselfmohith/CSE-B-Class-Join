@@ -1,11 +1,85 @@
-const span = document.querySelector(".pname"),
-  info =
-    '{\n    "links": {\n      "INT18R371": "//meet.google.com/obf-rgqt-tpt?pli=1&authuser=1",\n      "CSE18R173": "//meet.google.com/dev-tgvn-hov?pli=1&authuser=1",\n      "CSE18R273": "//meet.google.com/wqr-ecgm-awx?pli=1&authuser=1",\n      "CSE18R260": "//meet.google.com/pyf-ftxx-cdc?pli=1&authuser=1",\n      "MAT18R207": "//meet.google.com/pbo-ubqb-zjm?pli=1&authuser=1",\n      "BIT18R101": "//meet.google.com/lookup/ewfcqydb5o?authuser=1",\n      "NONE": "index.html"\n    },\n    "1": {\n      "Day": "Monday",\n      "1": "BIT18R101",\n      "2": "CSE18R273",\n      "3": "CSE18R173",\n      "4": "CSE18R260",\n      "5": "MAT18R207",\n      "6": "CSE18R273",\n      "7": "INT18R371"\n    },\n    "2": {\n      "Day": "Tuesday",\n      "1": "INT18R371",\n      "2": "INT18R371",\n      "3": "CSE18R173",\n      "4": "CSE18R173",\n      "5": "CSE18R273",\n      "6": "CSE18R173",\n      "7": "MAT18R207"\n    },\n    "3": {\n      "Day": "Wednesday",\n      "1": "CSE18R273",\n      "2": "BIT18R101",\n      "3": "CSE18R173",\n      "4": "CSE18R260",\n      "5": "NONE",\n      "6": "MAT18R207",\n      "7": "NONE"\n    },\n    "4": {\n      "Day": "Thrusday",\n      "1": "BIT18R101",\n      "2": "NONE",\n      "3": "CSE18R273",\n      "4": "CSE18R273",\n      "5": "CSE18R173",\n      "6": "MAT18R207",\n      "7": "INT18R371"\n    },\n    "5": {\n      "Day": "Friday",\n      "1": "CSE18R273",\n      "2": "CSE18R260",\n      "3": "CSE18R260",\n      "4": "CSE18R260",\n      "5": "CSE18R173",\n      "6": "MAT18R207",\n      "7": "INT18R371"\n    },\n    "6": {\n        "Day": "Saturday",\n        "1": "NONE",\n        "2": "NONE",\n        "3": "NONE",\n        "4": "NONE",\n        "5": "NONE",\n        "6": "NONE",\n        "7": "NONE"\n    }\n  }\n  ';
+const span = document.querySelector(".pname")
+let info = `{
+  "links": {
+    "INT18R371": "//meet.google.com/obf-rgqt-tpt?pli=1&authuser=1",
+    "CSE18R173": "//meet.google.com/dev-tgvn-hov?pli=1&authuser=1",
+    "CSE18R273": "//meet.google.com/wqr-ecgm-awx?pli=1&authuser=1",
+    "CSE18R260": "//meet.google.com/pyf-ftxx-cdc?pli=1&authuser=1",
+    "MAT18R207": "//meet.google.com/pbo-ubqb-zjm?pli=1&authuser=1",
+    "BIT18R101": "//meet.google.com/lookup/ewfcqydb5o?authuser=1",
+    "NONE": "index.html"
+  },
+  "1": {
+    "Day": "Monday",
+    "1": "BIT18R101",
+    "2": "CSE18R273",
+    "3": "CSE18R173",
+    "4": "CSE18R260",
+    "5": "MAT18R207",
+    "6": "CSE18R273",
+    "7": "INT18R371"
+  },
+  "2": {
+    "Day": "Tuesday",
+    "1": "INT18R371",
+    "2": "INT18R371",
+    "3": "CSE18R173",
+    "4": "CSE18R173",
+    "5": "CSE18R273",
+    "6": "CSE18R173",
+    "7": "MAT18R207"
+  },
+  "3": {
+    "Day": "Wednesday",
+    "1": "CSE18R273",
+    "2": "BIT18R101",
+    "3": "CSE18R173",
+    "4": "CSE18R260",
+    "5": "NONE",
+    "6": "MAT18R207",
+    "7": "NONE"
+  },
+  "4": {
+    "Day": "Thrusday",
+    "1": "BIT18R101",
+    "2": "NONE",
+    "3": "CSE18R273",
+    "4": "CSE18R273",
+    "5": "CSE18R173",
+    "6": "MAT18R207",
+    "7": "INT18R371"
+  },
+  "5": {
+    "Day": "Friday",
+    "1": "CSE18R273",
+    "2": "CSE18R260",
+    "3": "CSE18R260",
+    "4": "CSE18R260",
+    "5": "CSE18R173",
+    "6": "MAT18R207",
+    "7": "INT18R371"
+  },
+  "6": {
+      "Day": "Saturday",
+      "1": "NONE",
+      "2": "NONE",
+      "3": "NONE",
+      "4": "NONE",
+      "5": "NONE",
+      "6": "NONE",
+      "7": "NONE"
+  }
+}
+`
+
+
 function parseTime(n) {
-  var e = new Date(),
-    R = n.split(":");
+  var e = new Date();
+  R = n.split(":");
   return e.setHours(Number(R[0]), Number(R[1]), 0, 0), e;
 }
+
+
 function parseText(n) {
   return n.getHours() + ":" + n.getMinutes();
 }
@@ -20,16 +94,19 @@ const tstart = [
   parseTime("13:28"),
   parseTime("14:18"),
   parseTime("15:18"),
-],
-  tend = [
-    parseTime("9:50"),
-    parseTime("10:43"),
-    parseTime("11:43"),
-    parseTime("12:38"),
-    parseTime("14:17"),
-    parseTime("15:10"),
-    parseTime("16:10"),
-  ];
+]
+
+tend = [
+  parseTime("9:50"),
+  parseTime("10:43"),
+  parseTime("11:43"),
+  parseTime("12:38"),
+  parseTime("14:17"),
+  parseTime("15:10"),
+  parseTime("16:10"),
+];
+
+
 var cclass, clink, forhtml;
 function changeClass() {
   for (var e = new Date(), a = 0; a < 7; a++)
@@ -48,7 +125,9 @@ function changeClass() {
     }
   (forhtml = "NONE"), (span.innerHTML = forhtml);
 }
+
 let timenow = new Date();
+
 7 != timenow.getDay() && (changeClass(), setInterval(changeClass, 4e4));
 
 
@@ -60,3 +139,16 @@ function showDateTime() {
 
 showDateTime();
 setInterval(showDateTime, 1000);
+
+
+
+// ============================= Adding Notification ==========================
+
+
+const SW = navigator.serviceWorker.register('sw.js')
+Notification.permission === "default" && Notification.requestPermission().then(() => {
+  Notification.permission === "denied" && alert('You gona miss Push Message at the Start of CLass')
+})
+
+
+// ----------------------------------------------------------------------------
