@@ -157,7 +157,7 @@ Notification.permission === "default" && Notification.requestPermission().then((
 function notify(className) {
   SW.then((worker) => worker.showNotification('Class Alert', {
     body: `You have ${className} in minutes`,
-    icon: 'https://upload.wikimedia.org/wikipedia/en/5/53/Kalasalingam_Academy_of_Research_and_Education_logo.png',
+    icon: './favicon.png',
     image: 'https://9to5google.com/wp-content/uploads/sites/4/2020/05/google-meet-cover.jpg?quality=82&strip=all'
   }));
 }
