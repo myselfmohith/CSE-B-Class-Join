@@ -1,4 +1,5 @@
 const span = document.querySelector(".pname")
+
 let info = `{
   "links": {
     "INT18R371": "//meet.google.com/obf-rgqt-tpt?pli=1&authuser=1",
@@ -76,60 +77,62 @@ let info = `{
 function parseTime(n) {
   var e = new Date();
   R = n.split(":");
-  return e.setHours(Number(R[0]), Number(R[1]), 0, 0), e;
+  e.setHours(Number(R[0]), Number(R[1]), 0, 0)
+  return e;
 }
 
 
 function parseText(n) {
   return n.getHours() + ":" + n.getMinutes();
 }
+
+
 const timetable = JSON.parse(info);
+
+
 // Saturday Tiemtable Set here
-// timetable["6"] = timetable["5"];
+timetable["6"] = timetable["5"];
+
+
 const tstart = [
-  parseTime("8:57"),
-  parseTime("9:53"),
-  parseTime("10:53"),
-  parseTime("11:48"),
-  parseTime("13:28"),
-  parseTime("14:18"),
-  parseTime("15:18"),
+  "8:57",
+  "9:53",
+  "10:53",
+  "11:48",
+  "13:28",
+  "14:18",
+  "15:18",
 ]
 
 tend = [
-  parseTime("9:50"),
-  parseTime("10:43"),
-  parseTime("11:43"),
-  parseTime("12:38"),
-  parseTime("14:17"),
-  parseTime("15:10"),
-  parseTime("16:10"),
+  "9:50",
+  "10:43",
+  "11:43",
+  "12:38",
+  "14:17",
+  "15:10",
+  "16:10",
 ];
 
 
-var cclass, clink, forhtml;
+var cclass, clink, forhtml,currentVariable;
+
 function changeClass() {
-  for (var e = new Date(), a = 0; a < 7; a++)
-    if (e >= tstart[a] && e < tend[a]) {
-      if ("NONE" === (cclass = timetable[e.getDay()][a + 1])) break;
-      return (
-        (clink = timetable.links[cclass]),
-        (forhtml =
-          "<a target='_blank' href='" +
-          clink +
-          "'>" +
-          cclass +
-          "</a"),
-        void (span.innerHTML = forhtml)
-      );
+  var xyz = new Date();
+  for (i = 0; i < tstart.length; i++) {
+    if (xyz > parseTime(tstart[i]) && xyz < parseTime(tend[i])) {
+      cclass = timetable[xyz.getDay()][i + 1]
+      if (cclass === "NONE") return
+      clink = timetable.links[cclass];
+      forhtml = `<a href="${clink}" target="_blank">${cclass}</a>`;
+      span.innerHTML = forhtml;
     }
-  (forhtml = "NONE"), (span.innerHTML = forhtml);
+  }
 }
 
 let timenow = new Date();
-
-7 != timenow.getDay() && (changeClass(), setInterval(changeClass, 4e4));
-
+changeClass();
+7 != timenow.getDay() && setInterval(changeClass, 1000);
 
 
 function showDateTime() {
@@ -149,6 +152,30 @@ const SW = navigator.serviceWorker.register('sw.js')
 Notification.permission === "default" && Notification.requestPermission().then(() => {
   Notification.permission === "denied" && alert('You gona miss Push Message at the Start of CLass')
 })
+
+
+function notify(className) {
+  SW.then((worker) => worker.showNotification('Class Alert', {
+    body: `You have ${className} in minutes`,
+    icon: 'https://upload.wikimedia.org/wikipedia/en/5/53/Kalasalingam_Academy_of_Research_and_Education_logo.png',
+    image: 'https://9to5google.com/wp-content/uploads/sites/4/2020/05/google-meet-cover.jpg?quality=82&strip=all'
+  }));
+}
+
+
+function senClassNotification() {
+  const xyz = parseText(new Date());
+  if (cclass === 'NONE') return;
+  for (i = 0; i < tstart.length; i++){
+    if (xyz === tstart[i]) notify(cclass);
+    console.log("Hello");
+    console.log(xyz);
+  }
+}
+
+
+senClassNotification()
+setInterval(senClassNotification, 60000);
 
 
 // ----------------------------------------------------------------------------
