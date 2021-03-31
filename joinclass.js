@@ -168,8 +168,6 @@ function senClassNotification() {
   if (cclass === 'NONE') return;
   for (i = 0; i < tstart.length; i++){
     if (xyz === tstart[i]) notify(cclass);
-    console.log("Hello");
-    console.log(xyz);
   }
 }
 

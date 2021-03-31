@@ -7,6 +7,25 @@
   background-color: var(--primary-color);
 }
 
+::-webkit-scrollbar{
+  position: absolute;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  background-color: none;
+}
+
+::-webkit-scrollbar:hover{
+  width: 100px;
+}
+
+::-webkit-scrollbar-thumb{
+  position: absolute;
+  background-color: #ffffff25;
+  border-radius: 5px;
+}
+
+
 body {
   margin: 0;
   padding: 0;
