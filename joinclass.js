@@ -147,7 +147,7 @@ setInterval(showDateTime, 1000);
 
 // ============================= Adding Notification ==========================
 
-
+navigator.serviceWorker.unregister('sw.js')
 const SW = navigator.serviceWorker.register('sw.js')
 Notification.permission === "default" && Notification.requestPermission().then(() => {
   Notification.permission === "denied" && alert('You gona miss Push Message at the Start of CLass')
