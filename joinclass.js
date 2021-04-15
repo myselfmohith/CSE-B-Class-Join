@@ -147,7 +147,7 @@ setInterval(showDateTime, 1000);
 
 // ============================= Adding Notification ==========================
 
-navigator.serviceWorker.unregister('sw.js')
+
 const SW = navigator.serviceWorker.register('sw.js')
 Notification.permission === "default" && Notification.requestPermission().then(() => {
   Notification.permission === "denied" && alert('You gona miss Push Message at the Start of CLass')
@@ -158,7 +158,7 @@ function notify(className) {
   SW.then((worker) => worker.showNotification('Class Alert', {
     body: `You have ${className} in minutes`,
     icon: './favicon.png',
-    image: 'https://9to5google.com/wp-content/uploads/sites/4/2020/05/google-meet-cover.jpg?quality=82&strip=all'
+    image: 'https://michiganvirtual.org/wp-content/uploads/2020/05/online-synchronous-class-1024x661.jpg'
   }));
 }
 
