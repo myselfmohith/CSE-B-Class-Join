@@ -91,7 +91,7 @@ const timetable = JSON.parse(info);
 
 
 // Saturday Tiemtable Set here
-timetable["6"] = timetable["3"];
+timetable["6"] = timetable["1"];
 
 
 const tstart = [
