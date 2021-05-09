@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   text-decoration: none;
   --primary-color: #12142e; 
   --secondary-color: #191736;
@@ -117,8 +120,9 @@ table {
 }
 td,
 th {
-  padding: 15px 5px;
+  padding: 10px;
   background-color: transparent;
+  white-space: nowrap;
 }
 .weekFixed {
   text-align: center;
@@ -146,15 +150,6 @@ th,
 tr {
   border: solid 0.5px var(--primary-color) 0.5;
   transition: 0.5s;
-}
-td:hover {
-  transform: scale(1.2);
-}
-.nohoveraction td:hover {
-  transform: none;
-}
-.nohoveraction tr:hover {
-  background-color: none;
 }
 .nohoveraction {
   text-align: left;
