@@ -135,13 +135,13 @@ changeClass();
 7 != timenow.getDay() && setInterval(changeClass, 1000);
 
 
-function showDateTime() {
-  const uuuu = new Date();
-  document.querySelector(".current-container h3").innerHTML = (uuuu.toDateString() + " &nbsp; " + uuuu.toLocaleTimeString());
-}
+// function showDateTime() {
+//   const uuuu = new Date();
+//   document.querySelector(".current-container h3").innerHTML = (uuuu.toDateString() + " &nbsp; " + uuuu.toLocaleTimeString());
+// }
 
-showDateTime();
-setInterval(showDateTime, 1000);
+// showDateTime();
+// setInterval(showDateTime, 1000);
 
 
 
