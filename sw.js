@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "cse-b-cache-v0.1-09/08";
+const CACHE_NAME = "09/08 - Added OEE18R007 Link";
 const assets = [
     "./",
     "./icons/icon.png",
