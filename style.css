@@ -34,15 +34,6 @@ body {
   width: 1000px;
   max-width: 98vw;
   margin: auto;
-  animation: floatIn 400ms;
-}
-
-@keyframes floatIn {
-  from{
-    transform: translateY(20vh);
-  }to{
-    transform: translateY(0);
-  }
 }
 
 a {

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./icons/icon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./icons/icon.png">
     <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="./style.css">
     <meta name="theme-color" content="#1962d1">
@@ -68,6 +69,9 @@
     <script type="text/javascript" src="./timetable.json"></script>
     <script src="./ui.js"></script>
     <script src="./index.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js');
+    </script>
 </body>
 
 </html>
