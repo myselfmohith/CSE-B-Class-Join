@@ -1,6 +1,14 @@
 // Service Worker Version 0.1
 const CACHE_NAME = "cse-b-cache-v0.1";
-const assets = ["./offline.html"]
+const assets = [
+    "./",
+    "./icons/icon.png",
+    "./index.html",
+    "./index.js",
+    "./style.css",
+    "./timetable.json",
+    "./ui.js",
+]
 
 self.addEventListener('install', event => {
     event.waitUntil(
@@ -12,11 +20,18 @@ self.addEventListener('install', event => {
 })
 
 self.addEventListener('activate', event => {
-    console.log('Activating Service Worker');
+    event.waitUntil(
+        caches.keys().then(keys => {
+            return Promise.all(keys
+                .filter(key => key !== CACHE_NAME)
+                .map(key => caches.delete(key))
+            );
+        })
+    )
 })
 
 self.addEventListener('fetch', event => {
     event.respondWith(
-        caches.match(event.request).then(res => res || fetch(event.request).catch(() => caches.match("./offline.html")))
+        caches.match(event.request).then(res => res || fetch(event.request))
     )
 })
