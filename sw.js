@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "09/08 - Added OEE18R007 Link";
+const CACHE_NAME = "09/08 - Added Online First Approach in Service Worker";
 const assets = [
     "./",
     "./icons/icon.png",
@@ -32,6 +32,17 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
     event.respondWith(
-        caches.match(event.request).then(res => res || fetch(event.request))
+        // caches.match(event.request).then(res => res || fetch(event.request))
+        (async () => {
+            try{
+                return await fetch(event.request);
+            }catch(err){
+                try{
+                    return await caches.match(event.request);
+                }catch{
+                    return err;
+                }
+            }
+        })()
     )
 })
