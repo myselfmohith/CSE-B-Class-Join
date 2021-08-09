@@ -1,8 +1,8 @@
 {
     "short_name": "CSE-B",
     "name": "KLU CSE-B Time Table",
-    "start_url": "/",
-    "scope": "/",
+    "start_url": "./",
+    "scope": "./",
     "background_color": "#f2f4f7",
     "display": "standalone",
     "theme_color": "#1962d1",
