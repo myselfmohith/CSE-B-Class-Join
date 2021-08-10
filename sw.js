@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "09/08 - Added Online First Approach in Service Worker";
+const CACHE_NAME = "10/08 - Added CSE18R381 Link";
 const assets = [
     "./",
     "./icons/icon.png",
