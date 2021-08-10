@@ -5,6 +5,7 @@ Notification.permission === "default" && Notification.requestPermission((res) =>
 let userName = localStorage.getItem('user-name') || null;
 
 function notifyClass(className) {
+    if (!serviceWorker) return;
     if (!notificationPermission) return;
     const currentTime = new Date();
     const prevNotification = JSON.parse(localStorage.getItem('notification-track') || null);

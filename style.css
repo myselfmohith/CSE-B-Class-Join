@@ -18,6 +18,10 @@ h3 {
   text-align: center;
 }
 
+.update-heading{
+  color: #b80505;
+}
+
 #current-class {
   margin: 20px auto;
 }
