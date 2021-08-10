@@ -19,7 +19,7 @@
 <body>
     <div id="current-class">
     </div>
-    
+
     <h3>Course Details</h3>
     <div class="responsive-table">
         <table>
@@ -72,11 +72,20 @@
         <p id="time"></p>
     </footer>
     <script type="text/javascript" src="./timetable.json"></script>
+    <script>
+        let serviceWorker = null;
+        (async () => {
+            if ('serviceWorker' in navigator) {
+                try {
+                    serviceWorker = await navigator.serviceWorker.register('./sw.js');
+                } catch (error) {
+                    serviceWorker = null;
+                }
+            }
+        })();
+    </script>
     <script src="./ui.js"></script>
     <script src="./index.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js');
-    </script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "10/08 - Moved Course Details Up";
+const CACHE_NAME = "10/08 - Added Notification Support";
 const assets = [
     "./",
     "./icons/icon.png",
