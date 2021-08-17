@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "10/08 - Added Notification Support 2.0";
+const CACHE_NAME = "17/08 - Added Scrollbar and Chnage Name";
 const assets = [
     "./",
     "./icons/icon.png",
