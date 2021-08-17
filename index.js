@@ -53,12 +53,15 @@ function runEachSecond() {
 runEachSecond();
 setInterval(runEachSecond, 1000);
 
-
-// Get user deatils
-if (!userName) {
+function promtUserName(){
     userName = prompt('Enter Your username');
-    if (userName === "") userName = null;
+    if (userName === "") promtUserName();
     else {
         localStorage.setItem('user-name', userName);
+        document.getElementById('user-info').innerHTML = `Hello ${userName} 👋🏻`
     }
 }
+
+// Get user deatils
+if (!userName) promtUserName();
+else document.getElementById('user-info').innerHTML = `Hello ${userName} 👋🏻`
