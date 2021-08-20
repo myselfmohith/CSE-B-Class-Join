@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "19/08 - Add Custom Time Table Option";
+const CACHE_NAME = "20/08 - Added new Icons";
 const assets = [
     "./",
     "./icons/icon.png",
