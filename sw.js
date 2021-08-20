@@ -1,8 +1,10 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "17/08 - Added Scrollbar and Chnage Name";
+const CACHE_NAME = "19/08 - Add Custom Time Table Option";
 const assets = [
     "./",
     "./icons/icon.png",
+    "./edit.html",
+    "./Edit HTML/edit.js",
     "./index.html",
     "./index.js",
     "./style.css",

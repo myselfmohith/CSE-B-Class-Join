@@ -1,12 +1,12 @@
 {
-    "short_name": "CSE-B",
-    "name": "KLU CSE-B Time Table",
+    "short_name": "KLU TT",
+    "name": "KLU Time Table",
     "start_url": "./",
     "scope": "./",
     "background_color": "#f2f4f7",
     "display": "standalone",
     "theme_color": "#1962d1",
-    "description": "TIme table application for CSE-B Section",
+    "description": "TIme table application for 3rd year Students",
     "icons": [
         {
             "src": "./icons/icon 48x48.png",

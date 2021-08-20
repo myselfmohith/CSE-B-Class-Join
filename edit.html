@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./icons/icon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./icons/icon.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="theme-color" content="#1962d1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Edit TT</title>
+</head>
+
+<body>
+    <form>
+        <br />
+        <h1 style="margin-bottom: 20px;">Customize your timetable</h1>
+
+        <label>
+            <strong>Enter your name</strong>
+            <input type="text" id="user_name">
+        </label>
+
+        <h3>Course Details</h3>
+        <div class="responsive-table">
+            <table>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Faculty</th>
+                    <th>Class Link</th>
+                </tr>
+                <tr>
+                    <td><input name="cls-code-1" id="cls-code-1" type="text"></td>
+                    <td><input name="cls-name-1" id="cls-name-1" type="text"></td>
+                    <td><input name="cls-fa-1" id="cls-fa-1" type="text"></td>
+                    <td><input name="cls-link-1" id="cls-link-1" type="text"></td>
+                </tr>
+                <tr>
+                    <td><input name="cls-code-2" id="cls-code-2" type="text"></td>
+                    <td><input name="cls-name-2" id="cls-name-2" type="text"></td>
+                    <td><input name="cls-fa-2" id="cls-fa-2" type="text"></td>
+                    <td><input name="cls-link-2" id="cls-link-2" type="text"></td>
+                </tr>
+                <tr>
+                    <td><input name="cls-code-3" id="cls-code-3" type="text"></td>
+                    <td><input name="cls-name-3" id="cls-name-3" type="text"></td>
+                    <td><input name="cls-fa-3" id="cls-fa-3" type="text"></td>
+                    <td><input name="cls-link-3" id="cls-link-3" type="text"></td>
+                </tr>
+                <tr>
+                    <td><input name="cls-code-4" id="cls-code-4" type="text"></td>
+                    <td><input name="cls-name-4" id="cls-name-4" type="text"></td>
+                    <td><input name="cls-fa-4" id="cls-fa-4" type="text"></td>
+                    <td><input name="cls-link-4" id="cls-link-4" type="text"></td>
+                </tr>
+                <tr>
+                    <td><input name="cls-code-5" id="cls-code-5" type="text"></td>
+                    <td><input name="cls-name-5" id="cls-name-5" type="text"></td>
+                    <td><input name="cls-fa-5" id="cls-fa-5" type="text"></td>
+                    <td><input name="cls-link-5" id="cls-link-5" type="text"></td>
+                </tr>
+                <tr>
+                    <td><input name="cls-code-6" id="cls-code-6" type="text"></td>
+                    <td><input name="cls-name-6" id="cls-name-6" type="text"></td>
+                    <td><input name="cls-fa-6" id="cls-fa-6" type="text"></td>
+                    <td><input name="cls-link-6" id="cls-link-6" type="text"></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <h3>Time Table</h3>
+        <p> <strong>NOTE:</strong> Make sure the classcode is present in the above details else it will be taken as <span style="color: var(--primary-color);" >NULL</span> </p>
+
+        <div class="responsive-table">
+            <table id="time-table">
+                <tbody>
+                    <tr class="table-header">
+                        <th class="week-header"></th>
+                        <th>08:58 - 09:50</th>
+                        <th>09:53 - 10:45</th>
+                        <th>10:53 - 11:45</th>
+                        <th>11:48 - 12:40</th>
+                        <th>13:28 - 14:18</th>
+                        <th>14:18 - 15:10</th>
+                        <th>15:18 - 16:10</th>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td class="week-header">Monday</td>
+                        <td><input name="mon-1" id="mon-1" type="text"></td>
+                        <td><input name="mon-2" id="mon-2" type="text"></td>
+                        <td><input name="mon-3" id="mon-3" type="text"></td>
+                        <td><input name="mon-4" id="mon-4" type="text"></td>
+                        <td><input name="mon-5" id="mon-5" type="text"></td>
+                        <td><input name="mon-6" id="mon-6" type="text"></td>
+                        <td><input name="mon-7" id="mon-7" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="week-header">Tuesday</td>
+                        <td><input name="tue-1" id="tue-1" type="text"></td>
+                        <td><input name="tue-2" id="tue-2" type="text"></td>
+                        <td><input name="tue-3" id="tue-3" type="text"></td>
+                        <td><input name="tue-4" id="tue-4" type="text"></td>
+                        <td><input name="tue-5" id="tue-5" type="text"></td>
+                        <td><input name="tue-6" id="tue-6" type="text"></td>
+                        <td><input name="tue-7" id="tue-7" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="week-header">Wednesday</td>
+                        <td><input name="wed-1" id="wed-1" type="text"></td>
+                        <td><input name="wed-2" id="wed-2" type="text"></td>
+                        <td><input name="wed-3" id="wed-3" type="text"></td>
+                        <td><input name="wed-4" id="wed-4" type="text"></td>
+                        <td><input name="wed-5" id="wed-5" type="text"></td>
+                        <td><input name="wed-6" id="wed-6" type="text"></td>
+                        <td><input name="wed-7" id="wed-7" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="week-header">Thursday</td>
+                        <td><input name="thu-1" id="thu-1" type="text"></td>
+                        <td><input name="thu-2" id="thu-2" type="text"></td>
+                        <td><input name="thu-3" id="thu-3" type="text"></td>
+                        <td><input name="thu-4" id="thu-4" type="text"></td>
+                        <td><input name="thu-5" id="thu-5" type="text"></td>
+                        <td><input name="thu-6" id="thu-6" type="text"></td>
+                        <td><input name="thu-7" id="thu-7" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="week-header">Friday</td>
+                        <td><input name="fri-1" id="fri-1" type="text"></td>
+                        <td><input name="fri-2" id="fri-2" type="text"></td>
+                        <td><input name="fri-3" id="fri-3" type="text"></td>
+                        <td><input name="fri-4" id="fri-4" type="text"></td>
+                        <td><input name="fri-5" id="fri-5" type="text"></td>
+                        <td><input name="fri-6" id="fri-6" type="text"></td>
+                        <td><input name="fri-7" id="fri-7" type="text"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button class="btn btn-save" type="submit">Submit</button>
+        <button class="btn btn-clear" type="reset">Reset Fields</button>
+        <a href="./" class="btn btn-back">Go Back</a>
+    </form>
+
+
+    <script src="./Scripts/cseB.js"></script>
+    <script src="./Scripts/edit.js"></script>
+    <style>
+        input {
+            border: none;
+            outline: none;
+            border-bottom: solid .5px #22222220;
+            min-width: 100px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        input:focus {
+            border-bottom: solid .5px #222222;
+            background: #1962d120;
+        }
+
+        table tr td {
+            cursor: text;
+        }
+
+        table tr td:active {
+            opacity: 1;
+        }
+
+        label {
+            display: flex;
+            width: fit-content;
+            align-items: baseline;
+            margin: 20px auto;
+        }
+
+        #user_name {
+            background-color: inherit;
+            width: fit-content;
+            margin-left: 10px;
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        .btn-save {
+            background-color: var(--primary-color);
+        }
+
+        .btn-clear {
+            background-color: #f63535;
+        }
+
+        .btn-back{
+            background: #7259ff;
+            text-decoration: none;
+        }
+    </style>
+</body>
+
+</html>
