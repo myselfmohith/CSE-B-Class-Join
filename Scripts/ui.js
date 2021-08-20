@@ -33,7 +33,7 @@ timetable[6] = timetable[56] || null;
 
 for (var i = 0; i < timetable.length; i++) {
     if (!timetable[i]) continue;
-    appendTxt += `<tr><td>${days[i]}</td>`;
+    appendTxt += `<tr><td class="week-header">${days[i]}</td>`;
     for (var j of timetable[i]) appendTxt += `<td>${j ? `<a target="_blank" href="${appData['classDetails'][j]["link"]}">${j}</a>` : ""}</td>`;
     appendTxt += '</tr>';
 }
