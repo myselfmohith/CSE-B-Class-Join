@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "20/08 - Added new Icons";
+const CACHE_NAME = "21/08 Saturday = Friday";
 const assets = [
     "./",
     "./icons/icon.png",
