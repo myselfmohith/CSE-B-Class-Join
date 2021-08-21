@@ -29,7 +29,7 @@ for (var i = 0; i < classStart.length; i++) appendTxt += `<th>${classStart[i]} -
 appendTxt += "</tr>";
 
 const timetable = appData['timetable'];
-timetable[6] = timetable[56] || null;
+timetable[6] = timetable[5] || null;
 
 for (var i = 0; i < timetable.length; i++) {
     if (!timetable[i]) continue;
