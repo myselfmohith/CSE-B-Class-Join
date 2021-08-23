@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "21/08 Saturday = Friday";
+const CACHE_NAME = "Removed Saturday Timetable";
 const assets = [
     "./",
     "./icons/icon.png",
