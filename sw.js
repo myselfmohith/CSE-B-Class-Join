@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "Removed Saturday Timetable";
+const CACHE_NAME = "Google Analytics Setup";
 const assets = [
     "./",
     "./icons/icon.png",
