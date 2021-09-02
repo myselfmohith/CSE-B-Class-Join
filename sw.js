@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "Added On Notification Features [Click,require Interaction]";
+const CACHE_NAME = "Added 60MIN for Nirification Gap";
 const assets = [
     "./",
     "./icons/icon.png",
@@ -52,7 +52,6 @@ self.addEventListener('fetch', event => {
 
 self.addEventListener('notificationclick', event => {
     event.notification.close();
-    const gotoLink = event.notification.data.link;
     event.waitUntil(
         clients.matchAll({ includeUncontrolled: true, type: 'window' })
             .then(clients => {

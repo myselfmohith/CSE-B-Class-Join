@@ -17,7 +17,7 @@ function notifyClass(className) {
     }
     serviceWorker.showNotification('CSE-B Class Alert', options);
     localStorage.setItem('notification-track', JSON.stringify({
-        expiry: currentTime.getTime() + 2700000,
+        expiry: currentTime.getTime() + 3000000,
         className
     }))
 }
