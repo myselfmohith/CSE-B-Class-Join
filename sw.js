@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "Google Analytics Setup";
+const CACHE_NAME = "Added On Notification Features [Click,require Interaction]";
 const assets = [
     "./",
     "./icons/icon.png",
@@ -36,15 +36,27 @@ self.addEventListener('fetch', event => {
     event.respondWith(
         // caches.match(event.request).then(res => res || fetch(event.request))
         (async () => {
-            try{
+            try {
                 return await fetch(event.request);
-            }catch(err){
-                try{
+            } catch (err) {
+                try {
                     return await caches.match(event.request);
-                }catch{
+                } catch {
                     return err;
                 }
             }
         })()
+    )
+})
+
+
+self.addEventListener('notificationclick', event => {
+    event.notification.close();
+    const gotoLink = event.notification.data.link;
+    event.waitUntil(
+        clients.matchAll({ includeUncontrolled: true, type: 'window' })
+            .then(clients => {
+                clients.forEach(client => client.focus());
+            })
     )
 })

@@ -11,8 +11,9 @@ function notifyClass(className) {
         if (currentTime.getTime() < new Date(Number(prevNotification.expiry)) && className === prevNotification.className) return;
     };
     const options = {
-        body: `Hey ${appData['user_name']}.\nYou have "${className}" in few Minutes`,
+        body: `Hello ${appData['user_name']}.\nYou have "${className}" in few Minutes`,
         icon: './icons/icon.png',
+        requireInteraction: true
     }
     serviceWorker.showNotification('CSE-B Class Alert', options);
     localStorage.setItem('notification-track', JSON.stringify({

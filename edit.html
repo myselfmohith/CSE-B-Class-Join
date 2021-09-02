@@ -14,6 +14,63 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Edit TT</title>
+    <style>
+        input {
+            border: none;
+            outline: none;
+            border-bottom: solid .5px #22222220;
+            min-width: 100px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        input:focus {
+            border-bottom: solid .5px #222222;
+            background: #1962d120;
+        }
+
+        table tr td {
+            cursor: text;
+        }
+
+        table tr td:active {
+            opacity: 1;
+        }
+
+        label {
+            display: flex;
+            width: fit-content;
+            align-items: baseline;
+            margin: 20px auto;
+        }
+
+        #user_name {
+            background-color: inherit;
+            width: fit-content;
+            margin-left: 10px;
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        .btn-save {
+            background-color: var(--primary-color);
+        }
+
+        .btn-clear {
+            background-color: #f63535;
+        }
+
+        .btn-back {
+            background: #7259ff;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -74,9 +131,10 @@
             </table>
         </div>
 
-        
+
         <h3>Time Table</h3>
-        <p> <strong>NOTE:</strong> Make sure the classcode is present in the above details else it will be taken as <span style="color: var(--primary-color);" >NULL</span> </p>
+        <p> <strong>NOTE:</strong> Make sure the classcode is present in the above details else it will be taken as
+            <span style="color: var(--primary-color);">NULL</span> </p>
 
         <div class="responsive-table">
             <table id="time-table">
@@ -155,63 +213,6 @@
 
     <script src="./Scripts/cseB.js"></script>
     <script src="./Scripts/edit.js"></script>
-    <style>
-        input {
-            border: none;
-            outline: none;
-            border-bottom: solid .5px #22222220;
-            min-width: 100px;
-            width: 100%;
-            font-size: 16px;
-        }
-
-        input:focus {
-            border-bottom: solid .5px #222222;
-            background: #1962d120;
-        }
-
-        table tr td {
-            cursor: text;
-        }
-
-        table tr td:active {
-            opacity: 1;
-        }
-
-        label {
-            display: flex;
-            width: fit-content;
-            align-items: baseline;
-            margin: 20px auto;
-        }
-
-        #user_name {
-            background-color: inherit;
-            width: fit-content;
-            margin-left: 10px;
-        }
-
-        .btn {
-            border: none;
-            outline: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            color: #fff;
-        }
-
-        .btn-save {
-            background-color: var(--primary-color);
-        }
-
-        .btn-clear {
-            background-color: #f63535;
-        }
-
-        .btn-back{
-            background: #7259ff;
-            text-decoration: none;
-        }
-    </style>
 </body>
 
 </html>
