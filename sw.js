@@ -1,5 +1,9 @@
 // Service Worker Version 0.1
+<<<<<<< HEAD
 const CACHE_NAME = "Added Share to Friend";
+=======
+const CACHE_NAME = "Saturday === Monday";
+>>>>>>> 04ac51bf6735f07fc8e7e3b6595d70b49c742427
 const assets = [
     "./",
     "./icons/icon.png",
