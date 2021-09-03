@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "Added Share to Friend";
+const CACHE_NAME = "Added relative Path to the Edit.js";
 
 const assets = [
     "./",

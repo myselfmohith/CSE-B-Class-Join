@@ -75,7 +75,7 @@ function shareTimeTable() {
         url: link
     })
     window.location.search = ""
-    window.location.pathname = "";
+    window.location.pathname += "/..";
 }
 
 
