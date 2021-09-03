@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "Added 60MIN for Nirification Gap";
+const CACHE_NAME = "Added Share to Friend";
 const assets = [
     "./",
     "./icons/icon.png",

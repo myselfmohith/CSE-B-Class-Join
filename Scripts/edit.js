@@ -1,10 +1,10 @@
 // Load prevoius data
-const appData = JSON.parse(localStorage.getItem('application-data') || deafaultData);
+const localappData = JSON.parse(localStorage.getItem('application-data') || deafaultData);
 const Inputs = document.querySelector('form');
 const daycodes = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri'];
 
 
-function loadAppData() {
+function loadAppData(appData) {
     // Set Course Name
     const classDetails = appData['classDetails'];
     const timetable = appData['timetable'];
@@ -29,7 +29,6 @@ function loadAppData() {
     }
 }
 
-appData && loadAppData();
 // Formats -> cls-code-1 cls-name-1 cls-fa-1 cls-link-1 & '<week>-<Number>'
 
 // Accept New Data
@@ -37,7 +36,7 @@ appData && loadAppData();
 Inputs.addEventListener('submit', (e) => {
     e.preventDefault();
     const classList = []
-    const classDetails = {};
+    const classDetails = { };
     const timetable = [null];
 
     // Add Course details
@@ -46,7 +45,7 @@ Inputs.addEventListener('submit', (e) => {
         const class_code = Inputs[`cls-code-${i}`].value.toUpperCase();
         if (class_code === "") break;
         classList.push(class_code);
-        classDetails[class_code] = {}
+        classDetails[class_code] = { }
         classDetails[class_code]['name'] = Inputs[`cls-name-${i}`].value;
         classDetails[class_code]['faculty'] = Inputs[`cls-fa-${i}`].value;
         classDetails[class_code]['link'] = Inputs[`cls-link-${i}`].value;
@@ -57,7 +56,7 @@ Inputs.addEventListener('submit', (e) => {
         const dayClass = []
         for (var j = 1; j <= 7; j++) {
             const className = Inputs[`${daycodes[i]}-${j}`].value.toUpperCase();
-            dayClass.push((className !== "" & classList.includes(className) & className.search(" ") === -1 )? className : null);
+            dayClass.push((className !== "" & classList.includes(className) & className.search(" ") === -1) ? className : null);
         }
         timetable.push(dayClass);
     }
@@ -66,3 +65,27 @@ Inputs.addEventListener('submit', (e) => {
     localStorage.setItem('application-data', JSON.stringify({ user_name, classDetails, timetable }));
     window.location.href = "./"
 })
+
+
+function shareTimeTable() {
+    const params = new URLSearchParams(new FormData(Inputs));
+    const link = window.location.origin + window.location.pathname + `?${params}`;
+    navigator.share({
+        title: "Share Time Table",
+        url: link
+    })
+    window.location.search = ""
+    window.location.pathname = "";
+}
+
+
+if (window.location.href.indexOf('?') !== -1) {
+    const params = new URLSearchParams(window.location.search)
+    params.forEach((val,key) => {
+        try{
+            Inputs[key].value = val;
+        }catch(err){
+            null;
+        }
+    })
+} else localappData && loadAppData(localappData);
