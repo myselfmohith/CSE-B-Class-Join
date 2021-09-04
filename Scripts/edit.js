@@ -36,7 +36,7 @@ function loadAppData(appData) {
 Inputs.addEventListener('submit', (e) => {
     e.preventDefault();
     const classList = []
-    const classDetails = { };
+    const classDetails = {};
     const timetable = [null];
 
     // Add Course details
@@ -45,7 +45,7 @@ Inputs.addEventListener('submit', (e) => {
         const class_code = Inputs[`cls-code-${i}`].value.toUpperCase();
         if (class_code === "") break;
         classList.push(class_code);
-        classDetails[class_code] = { }
+        classDetails[class_code] = {}
         classDetails[class_code]['name'] = Inputs[`cls-name-${i}`].value;
         classDetails[class_code]['faculty'] = Inputs[`cls-fa-${i}`].value;
         classDetails[class_code]['link'] = Inputs[`cls-link-${i}`].value;
@@ -70,21 +70,23 @@ Inputs.addEventListener('submit', (e) => {
 function shareTimeTable() {
     const params = new URLSearchParams(new FormData(Inputs));
     const link = window.location.origin + window.location.pathname + `?${params}`;
+
     navigator.share({
         title: "Share Time Table",
         url: link
+    }).then(() => {
+        window.location.search = ""
+        window.location.pathname += "/..";
     })
-    window.location.search = ""
-    window.location.pathname += "/..";
 }
 
 
 if (window.location.href.indexOf('?') !== -1) {
     const params = new URLSearchParams(window.location.search)
-    params.forEach((val,key) => {
-        try{
+    params.forEach((val, key) => {
+        try {
             Inputs[key].value = val;
-        }catch(err){
+        } catch (err) {
             null;
         }
     })

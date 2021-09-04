@@ -1,16 +1,16 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "Added relative Path to the Edit.js";
+const CACHE_NAME = "CACHE CHNAGES(New ache names)";
 
 const assets = [
     "./",
     "./icons/icon.png",
+    "./Scripts/cseB.js",
+    "./Scripts/edit.js",
+    "./Scripts/index.js",
+    "./Scripts/ui.js",
     "./edit.html",
-    "./Edit HTML/edit.js",
     "./index.html",
-    "./index.js",
-    "./style.css",
-    "./timetable.json",
-    "./ui.js",
+    "./style.css"
 ]
 
 self.addEventListener('install', event => {
