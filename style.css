@@ -31,9 +31,33 @@ h3 {
   color: var(--primary-color);
 }
 
-body {
-  padding-bottom: 10px;
+body{
   background: var(--bg-color);
+}
+
+footer{
+  background: var(--primary-color);
+  padding: 20px 0 5px;
+}
+
+footer *{
+  color: #dfe5e9;
+}
+
+#time{
+  font-family: monospace;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+i {
+  color: inherit;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+#root {
+  padding-bottom: 10px;
   width: 1000px;
   max-width: 90vw;
   margin: auto;
@@ -126,4 +150,14 @@ th:last-child {
 
 table tr td:active {
   opacity: 0.5;
+}
+
+.flex-links{
+  display: flex;
+  justify-content: center;
+}
+
+.flex-links > a{
+  color: #fff;
+  margin: auto 10px;
 }

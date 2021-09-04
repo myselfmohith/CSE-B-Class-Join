@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "CACHE CHNAGES(New ache names)";
+const CACHE_NAME = "CACHE CHNAGES(Added New Icons)";
 
 const assets = [
     "./",
@@ -10,7 +10,9 @@ const assets = [
     "./Scripts/ui.js",
     "./edit.html",
     "./index.html",
-    "./style.css"
+    "./style.css",
+    "https://kit.fontawesome.com/f93025829a.js",
+    "https://fonts.googleapis.com/css2?family=Poppins&display=swap"
 ]
 
 self.addEventListener('install', event => {

@@ -3,7 +3,7 @@ const course_details = document.getElementById('course-details');
 const time_table = document.getElementById('time-table');
 
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const classStart = ["08:58", "09:53", "10:53", "11:48", "13:28", "14:18", "15:18"];
+const classStart = ["08:58", "09:53", "10:53", "11:48", "13:28", "14:19", "15:18"];
 const classEnd = ["09:50", "10:45", "11:45", "12:40", "14:18", "15:10", "16:10"];
 
 !appData ? window.location.href = "./edit.html" : null;

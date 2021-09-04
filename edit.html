@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f93025829a.js" crossorigin="anonymous"></script>
     <title>Edit TT</title>
     <style>
         input {
@@ -50,12 +51,26 @@
             margin-left: 10px;
         }
 
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
         .btn {
             border: none;
             outline: none;
             padding: 10px 15px;
             border-radius: 5px;
             color: #fff;
+            margin: 5px;
+            min-width: 100px;
+            cursor: pointer;
+        }
+
+        .btn:active{
+            filter: brightness(1.8);
         }
 
         .btn-save {
@@ -134,7 +149,8 @@
 
         <h3>Time Table</h3>
         <p> <strong>NOTE:</strong> Make sure the classcode is present in the above details else it will be taken as
-            <span style="color: var(--primary-color);">NULL</span> </p>
+            <span style="color: var(--primary-color);">NULL</span>
+        </p>
 
         <div class="responsive-table">
             <table id="time-table">
@@ -205,10 +221,19 @@
             </table>
         </div>
 
-        <button class="btn btn-save" type="submit">Submit</button>
-        <button class="btn btn-clear" type="reset">Reset Fields</button>
-        <button id="share-button" type="button" class="btn btn-save" onclick="shareTimeTable()" >Share</button>
-        <a href="./" class="btn btn-back">Go Back</a>
+
+        <div class="button-container">
+            <div>
+                <button class="btn btn-save" type="submit"> <i class="fas fa-save"></i> Save</button>
+                <button class="btn btn-clear" type="reset"><i class="fas fa-times"></i>Clear</button>
+            </div>
+            <div>
+                <a href="./"><button class="btn btn-back"><i class="fas fa-home"></i>Home</button></a>
+                <button id="share-button" type="button" class="btn btn-save" onclick="shareTimeTable()"> <i
+                        class="fas fa-share-alt"></i> Share</button>
+            </div>
+        </div>
+
     </form>
 
 

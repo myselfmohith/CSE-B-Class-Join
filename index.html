@@ -13,40 +13,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f93025829a.js" crossorigin="anonymous"></script>
     <title>KLU TT</title>
 </head>
 
 <body>
-    <div id="current-class">
-    </div>
-    <p id="user-info">Hey USER</p>
-    <p><strong>UPDATE:</strong><br /> Now you can share your TimeTable Layout with your Friends.</p>
-    <br>
-    <h3>Course Details</h3>
-    <div class="responsive-table">
-        <table id="course-details">
-            <tr>
-                <th>Course Code</th>
-                <th>Course Name</th>
-                <th>Faculty name</th>
-            </tr>
-        </table>
-    </div>
-    <p></p>
+    <div id="root">
+        <div id="current-class">
+        </div>
+        <p id="user-info">Hey USER</p>
+        <p><strong>UPDATE:</strong><br /> Now you can share your TimeTable Layout with your Friends.</p>
+        <br>
+        <h3>Course Details</h3>
+        <div class="responsive-table">
+            <table id="course-details">
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Faculty name</th>
+                </tr>
+            </table>
+        </div>
+        <p></p>
 
-    <h3>Time Table</h3>
-    <div class="responsive-table">
-        <table id="time-table"></table>
+        <h3>Time Table</h3>
+        <div class="responsive-table">
+            <table id="time-table"></table>
+        </div>
     </div>
-
 
     <footer>
+        <div class="flex-links">
+            <a href="./edit.html"><i class="fas fa-edit"></i>Create</a>
+            <a onclick="clearStorage()" href=""><i class="fas fa-history"></i>Reset</a>
+            <a href="./edit.html#share-button"><i class="fas fa-share-alt"></i>Share</a>
+        </div>
         <p id="time"></p>
-        <p> <a style="margin: 20px auto;color: blue;" href="./edit.html">Customize to your timetable</a> or <a
-                style="margin: 20px auto;color: blue;" onclick="clearStorage()" href="">Revert back CSE-B timetable</a>
-            or
-            <a style="margin: 20px auto;color: blue;" href="./edit.html#share-button">Share your Time table</a>
-        </p>
+
     </footer>
     <script>
         let serviceWorker = null;
