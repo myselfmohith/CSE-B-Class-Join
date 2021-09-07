@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "CACHE CHNAGES(Added Github ICON)";
+const CACHE_NAME = "CACHE CHNAGES(Updates [current-class,Saturday])";
 
 const assets = [
     "./",

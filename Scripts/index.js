@@ -46,7 +46,7 @@ function runEachSecond() {
     if (cls) {
         document.getElementById('current-class').innerHTML = `<p>Current Class</p><h1><a href="${appData['classDetails'][cls].link}" target="blank" >${cls}</a></h1>`;
         notifyClass(String(cls));
-    }
+    } else document.getElementById('current-class').innerHTML = "";
 };
 
 runEachSecond();
