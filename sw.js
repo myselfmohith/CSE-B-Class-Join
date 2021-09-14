@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "CACHE CHNAGES(Updates [current-class,Saturday])";
+const CACHE_NAME = "CACHE CHNAGES(Removed Upadte section)";
 
 const assets = [
     "./",
