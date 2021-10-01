@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "CACHE CHNAGES(Saturday = Friday)";
+const CACHE_NAME = "CACHE CHNAGES(Saturday = NULL)";
 
 const assets = [
     "./",
