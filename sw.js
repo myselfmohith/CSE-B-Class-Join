@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "CACHE CHNAGES()";
+const CACHE_NAME = "CACHE CHNAGES(Added New OEE18R007 Link)";
 
 const assets = [
     "./",
