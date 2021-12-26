@@ -41,7 +41,7 @@ Inputs.addEventListener('submit', (e) => {
 
     // Add Course details
     const user_name = Inputs['user_name'].value;
-    for (var i = 1; i <= 6; i++) {
+    for (var i = 1; i <= 8; i++) {
         const class_code = Inputs[`cls-code-${i}`].value.toUpperCase();
         if (class_code === "") break;
         classList.push(class_code);

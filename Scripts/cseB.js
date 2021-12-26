@@ -1,1 +1,74 @@
-const deafaultData = `{"user_name":"USER","classDetails":{"CSE18R371":{"name":"Computer Networks","faculty":"Dr.B.S.MURUGAN","link":"https://meet.google.com/vqp-ujer-ynb"},"CSE18R258":{"name":"Descriptive Analytics","faculty":"Ms. R.SUMATHI","link":"https://meet.google.com/dev-tgvn-hov"},"CSE18R381":{"name":"Data Visualization for Analytics","faculty":"Dr.P.DEEPALAKSHMI","link":"https://meet.google.com/pwb-yytu-sgy"},"CSE18R252":{"name":"Formal Language and Automata","faculty":"Mr. P. NAGARAJ","link":"https://meet.google.com/pyf-ftxx-cdc"},"ECE18R445":{"name":"Telecommunication Networks","faculty":"Dr. PRABHAT KUMAR PANDA","link":"https://meet.google.com/bqh-ubbu-hjd"},"OEE18R007":{"name":"Analytical Methods in Material Science","faculty":"Ms.M.Ramuthai","link":"https://meet.google.com/hiu-jtaz-qrm"}},"timetable":[null,["CSE18R371","CSE18R371","CSE18R258","CSE18R258","CSE18R252","OEE18R007","OEE18R007"],["CSE18R252","CSE18R252","ECE18R445","ECE18R445","CSE18R371","CSE18R371",null],["CSE18R371","CSE18R371","OEE18R007","OEE18R007","CSE18R381","CSE18R381",null],["CSE18R258","CSE18R258","ECE18R445","ECE18R445","CSE18R381","CSE18R381",null],["CSE18R258","CSE18R381","CSE18R252","CSE18R252","CSE18R371",null,null],null]}`
+const deafaultData = `{
+    "user_name": "User",
+    "classDetails": {
+        "CSE18R274": {
+            "name": "Compiler Design",
+            "faculty": "Mr. P. NAGARAJ",
+            "link": ""
+        },
+        "CSE18R399": {
+            "name": "Community Service Project",
+            "faculty": "Mr. K. MUTHAMIL SUDAR",
+            "link": ""
+        },
+        "CSE18R468": {
+            "name": "Big Data Analytics",
+            "faculty": "Dr. S. KARKUZHALI",
+            "link": ""
+        },
+        "CSE18R467": {
+            "name": "Social, Web and Mobile Analytics",
+            "faculty": "Dr. T. VEERAMAKALI",
+            "link": ""
+        }
+    },
+    "timetable": [
+        null,
+        [
+            "CSE18R274",
+            null,
+            "CSE18R468",
+            null,
+            "CSE18R274",
+            "CSE18R274",
+            null
+        ],
+        [
+            "CSE18R468",
+            "CSE18R468",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        [
+            "CSE18R467",
+            "CSE18R399",
+            "CSE18R399",
+            "CSE18R399",
+            "CSE18R274",
+            null,
+            null
+        ],
+        [
+            "CSE18R468",
+            "CSE18R468",
+            null,
+            null,
+            "CSE18R467",
+            "CSE18R467",
+            null
+        ],
+        [
+            "CSE18R274",
+            "CSE18R467",
+            "CSE18R467",
+            null,
+            null,
+            null,
+            null
+        ],
+        null
+    ]
+}`
