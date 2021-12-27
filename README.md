@@ -3,7 +3,7 @@
 ## Contents
 |Name|Navigate|
 |:-|:-:|
-|Page|[↗️](https://myselfmohith.github.io/CSE-B-Class-Join/){:target:"_blank"}|
+|Page|<a href="https://myselfmohith.github.io/CSE-B-Class-Join/" target="_blank" >[↗️]</a>|
 |Preview|[▼](#preview)|
 |Folder Description|[▼](#folder-description)|
 |Build Utils|[▼](#build-utils)|
