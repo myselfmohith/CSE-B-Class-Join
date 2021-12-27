@@ -54,16 +54,16 @@ Inputs.addEventListener('submit', (e) => {
     // Add time table
     for (var i = 1; i <= 5; i++) {
         const dayClass = []
-        for (var j = 1; j <= 7; j++) {
+        for (var j = 1; j <= 8; j++) {
             const className = Inputs[`${daycodes[i]}-${j}`].value.toUpperCase();
             dayClass.push((className !== "" & classList.includes(className) & className.search(" ") === -1) ? className : null);
         }
         timetable.push(dayClass);
     }
-    timetable.push(null)
+    timetable.push(null);
 
     localStorage.setItem('application-data', JSON.stringify({ user_name, classDetails, timetable }));
-    window.location.href = "./"
+    window.location.href = "./";
 })
 
 

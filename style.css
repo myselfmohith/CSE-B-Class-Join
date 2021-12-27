@@ -94,12 +94,18 @@ a:hover {
   overflow-x: auto;
   border-radius: 10px;
   margin: 15px auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .responsive-table::-webkit-scrollbar {
+  display: none;
   background-clip: content-box;
   height: 5px;
   background: #5e617525;
+}
+
+.responsive-table:hover::-webkit-scrollbar {
+  display: unset;
 }
 
 .responsive-table::-webkit-scrollbar-thumb {

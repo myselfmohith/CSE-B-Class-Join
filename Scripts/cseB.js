@@ -4,7 +4,7 @@ const deafaultData = `{
         "CSE18R274": {
             "name": "Compiler Design",
             "faculty": "Mr. P. NAGARAJ",
-            "link": ""
+            "link": "https://meet.google.com/pyf-ftxx-cdc"
         },
         "CSE18R399": {
             "name": "Community Service Project",
@@ -14,7 +14,7 @@ const deafaultData = `{
         "CSE18R468": {
             "name": "Big Data Analytics",
             "faculty": "Dr. S. KARKUZHALI",
-            "link": ""
+            "link": "https://us02web.zoom.us/j/84366778369?pwd=TGxFSGhMbEZKNWNwTUNCeEdVM3RPQT09"
         },
         "CSE18R467": {
             "name": "Social, Web and Mobile Analytics",
@@ -31,11 +31,13 @@ const deafaultData = `{
             null,
             "CSE18R274",
             "CSE18R274",
+            null,
             null
         ],
         [
             "CSE18R468",
             "CSE18R468",
+            null,
             null,
             null,
             null,
@@ -49,6 +51,7 @@ const deafaultData = `{
             "CSE18R399",
             "CSE18R274",
             null,
+            null,
             null
         ],
         [
@@ -58,12 +61,14 @@ const deafaultData = `{
             null,
             "CSE18R467",
             "CSE18R467",
+            null,
             null
         ],
         [
             "CSE18R274",
             "CSE18R467",
             "CSE18R467",
+            null,
             null,
             null,
             null,
