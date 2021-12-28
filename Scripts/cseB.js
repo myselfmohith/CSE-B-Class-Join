@@ -20,6 +20,11 @@ const deafaultData = `{
             "name": "Social, Web and Mobile Analytics",
             "faculty": "Dr. T. VEERAMAKALI",
             "link": ""
+        },
+        "INT18R315": {
+            "name": "Web Programming",
+            "faculty": "Dr. S.P. BALAKANNAN",
+            "link": "https://meet.google.com/vqn-pujy-jbm"
         }
     },
     "timetable": [
@@ -37,8 +42,8 @@ const deafaultData = `{
         [
             "CSE18R468",
             "CSE18R468",
-            null,
-            null,
+            "INT18R315",
+            "INT18R315",
             null,
             null,
             null,
@@ -57,8 +62,8 @@ const deafaultData = `{
         [
             "CSE18R468",
             "CSE18R468",
-            null,
-            null,
+            "INT18R315",
+            "INT18R315",
             "CSE18R467",
             "CSE18R467",
             null,

@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "CACHE CHNAGES(Year Update)";
+const CACHE_NAME = "CACHE CHNAGES(Added New Class)";
 
 const assets = [
     "./",
