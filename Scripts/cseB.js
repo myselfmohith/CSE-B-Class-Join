@@ -9,7 +9,7 @@ const deafaultData = `{
         "CSE18R399": {
             "name": "Community Service Project",
             "faculty": "Mr. K. MUTHAMIL SUDAR",
-            "link": ""
+            "link": "https://meet.google.com/wry-prcz-shb"
         },
         "CSE18R468": {
             "name": "Big Data Analytics",
@@ -19,7 +19,7 @@ const deafaultData = `{
         "CSE18R467": {
             "name": "Social, Web and Mobile Analytics",
             "faculty": "Dr. T. VEERAMAKALI",
-            "link": ""
+            "link": "https://us02web.zoom.us/j/84366778369?pwd=TGxFSGhMbEZKNWNwTUNCeEdVM3RPQT09"
         },
         "INT18R315": {
             "name": "Web Programming",
