@@ -8,6 +8,8 @@
 |Folder Description|[▼](#folder-description)|
 |Build Utils|[▼](#build-utils)|
 
+### Javascript Techologgies
+* Notification API
 
 ### Preview
 <img style="border-radius: 5px" src="./extras/preview.png" width="100%"></img>
