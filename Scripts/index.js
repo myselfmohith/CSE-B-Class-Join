@@ -1,4 +1,4 @@
-// Check for Notification Permisiions
+// Check for Notification Permissions
 let notificationPermission = Notification.permission === 'granted';
 Notification.permission === "default" && Notification.requestPermission((res) => notificationPermission = res === "granted");
 
