@@ -1,5 +1,5 @@
 // Service Worker Version 0.1
-const CACHE_NAME = "CACHE CHANGES(Saturday = Monday)";
+const CACHE_NAME = "CACHE CHANGES(Saturday = Tuesday)";
 
 const assets = [
     "./",
